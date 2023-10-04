@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Marhey', cursive;
+}
+:root {
+    --mainColor: #33A8DB;
+    --secondaryColor: #FFFFFF;
+    --secondaryColor2: #ffffff8d;
+}
+body {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* .cover {
+    background-color: rgba(0, 0, 0, 0.505);
+    width: 100%;
+} */
+.container {
+    margin: 0 100px;
+    display: flex;
+    align-items: center;
+}
+#box {
+    width: 50%;
+    margin: 200px 0;
+    color: var(--secondaryColor);
+}
+h1 {
+    color: var(--mainColor);
+    text-shadow: 0 0 10px var(--secondaryColor);
+    text-align: left;
+}
+.amount {
+    background-color: var(--secondaryColor2);
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border-radius: 5px;
+    margin: 40px 0;
+}
+label {
+    padding: 4px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.603);
+    margin: 1px;
+    text-align: right;
+    direction: rtl;
+}
+input {
+    padding: 4px;
+    margin: 1px;
+    background-color: transparent;
+    border: transparent;
+    color: var(--secondaryColor);
+}
+input:focus {
+    outline: none;
+}
+.result {
+    background-color: var(--secondaryColor2);
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border-radius: 5px;
+    margin: 40px 0;
+}
+#sub {
+    background-image: linear-gradient(to right, var(--mainColor), var(--secondaryColor));
+    padding: 4px;
+    width: 50%;
+    border-radius: 5px;
+    margin: 40px 0;
+    cursor: pointer;
+    color: black;
+}
+#image {
+    width: 25%;
+    transform: scale(1);
+}
+::placeholder {
+    color: var(--secondaryColor);
+}
+@media (max-width:1370px) {
+    body {
+        background-size: contain;
+        background-repeat: repeat-y;
+    }
+    #image {
+        display: none;
+    }
+    #box {
+        width: 100%;
+    }
+    h1 {
+        text-align: center;
+    }
+  }
+@media (max-width:813px) {
+   .amount {
+    width: 100%;
+   }
+   .result {
+    width: 100%;
+   }
+   #sub {
+    width: 100%;
+   }
+  }
