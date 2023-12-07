@@ -10,18 +10,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Marhey:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html"><li>حاسبة الزكاة</li></a>
+                <a href="#shart"><li>شروط الزكاة</li></a>
+            </nav>
+        </div>
+    </header>
     <div class="cover">
         <div class="container">
             <section id="box">
                 <h1>احسب زكاة المال </h1>
                 <div class="amount">
                     <label for="input">ادخل القيمة بالدينار الاردني:</label>
-                    <input type="number" name="input" value="in" id="input" class="input">
+                    <input type="number" name="input" value="in" id="input" class="input" min="0">
                 </div>
                 <span></span>
                 <div class="result">
                     <label for="result">مقدار الزكاة: </label>
-                    <input type="number" name="result" id="result"  disabled placeholder="0 JD">
+                    <input type="number" name="result" id="result"  disabled readonly placeholder="0 JD">
                 </div>
                 <!-- <div>
                     <button type="submit" id="sub" onclick="info()">Calculate</button>
@@ -30,8 +38,22 @@
             <section id="image">
                 <img src="images/undraw-removebg.png" alt="not found">
             </section>
+            <section id="shart">
+                <!-- <img src="images/undraw-removebg.png" alt="not found"> -->
+                <h2> شروط وجوب زكاة المال</h2>
+                <ul>
+                    <li>الحول: يجب أنْ تمرّ على حيازة المال البالغ للنصاب عام قمري حتى تجب الزكاة.</li>
+                    <li>الزيادة عن الحاجة: من شروط وجوب زكاة المال زيادة مال المسلم عن حاجته في تلبية متطلباته الأساسية من مأكل، ومشرب، ومسكن، وكسوة، ونفقة على الأسرة، وغيرها من مستلزمات.</li>
+                    <li>الملك التام: يجب أنْ يكون المال مملوكاً لصاحبه مستقراً لديه.</li>
+                    <li>النماء: قابلية نمو المال وزيادته، حيث أنّ الأموال المعدّة للاقتناء لا زكاة فيها.</li>
+                    <li>بلوغ النصاب: يُعد النصاب مبلغ المال الأدنى الذي يجب على المسلم حيازته لتجب عليه زكاة المال.</li>
+                </ul>
+            </section>
         </div>
     </div>
+    <footer>
+        <p>All rights reserved &copy; Farah Hasan</p>
+    </footer>
     <script src="JS/script.js"></script>
 </body>
 </html>
