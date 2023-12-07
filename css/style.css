@@ -13,6 +13,12 @@ body {
     background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
+    direction: rtl;
+}
+a {
+    text-decoration: none;
+    color: inherit;
 }
 /* .cover {
     background-color: rgba(0, 0, 0, 0.505);
@@ -22,6 +28,31 @@ body {
     margin: 0 100px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--mainColor);
+}
+header nav {
+    direction: rtl;
+    color: black;
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 5px;
+}
+header nav a {
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+header nav a:hover {
+    background-color: white;
 }
 #box {
     width: 50%;
@@ -31,7 +62,11 @@ body {
 h1 {
     color: var(--mainColor);
     text-shadow: 0 0 10px var(--secondaryColor);
-    text-align: left;
+    text-align: right;
+}
+h2 {
+    text-align: right;
+    direction: rtl;
 }
 .amount {
     background-color: var(--secondaryColor2);
@@ -77,6 +112,17 @@ input:focus {
     cursor: pointer;
     color: black;
 }
+#shart {
+    color: var(--mainColor);
+    direction: rtl;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: right;
+}
 #image {
     width: 25%;
     transform: scale(1);
@@ -84,29 +130,74 @@ input:focus {
 ::placeholder {
     color: var(--secondaryColor);
 }
-@media (max-width:1370px) {
-    body {
-        background-size: contain;
-        background-repeat: repeat-y;
+footer {
+    background-color: var(--mainColor);
+    color: black;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+@media (max-width:1097px) {
+    h1 {
+        text-align: center;
+    }
+    header nav {
+        width: 100%;
+    }
+    .container {
+        margin: 0;
+    }
+    #box {
+        width: 50%;
+        margin: 200px auto;
     }
     #image {
         display: none;
     }
-    #box {
+    #shart {
         width: 100%;
     }
-    h1 {
-        text-align: center;
+    #shart ul, #shart ul li{
+        width: 100%;
     }
-  }
+    .amount {
+    width: 100%;
+    }
+    .result {
+    width: 100%;
+    }
+    #sub {
+    width: 100%;
+    }
+} 
 @media (max-width:813px) {
-   .amount {
+    header nav {
+        width: 100%;
+    }
+    .container {
+        margin: 0;
+    }
+    #box {
+        width: 80%;
+        margin: 200px auto;
+    }
+    #image {
+        display: none;
+    }
+    #shart {
+        width: 100%;
+    }
+    #shart ul, #shart ul li{
+        width: 100%;
+    }
+    .amount {
     width: 100%;
-   }
-   .result {
+    }
+    .result {
     width: 100%;
-   }
-   #sub {
+    }
+    #sub {
     width: 100%;
-   }
-  }
+    }
+}
